@@ -15,11 +15,7 @@ import android.app.Activity;
 import com.rssignaturecapture.RSSignatureCaptureViewManager;
 
 public class RSSignatureCapturePackage implements ReactPackage {
-  private Activity mCurrentActivity;
-
-  public RSSignatureCapturePackage(Activity activity) {
-    mCurrentActivity = activity;
-  }
+  public RSSignatureCapturePackage() {}
 
   @Override
   public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
@@ -28,7 +24,7 @@ public class RSSignatureCapturePackage implements ReactPackage {
 
   @Override
   public List<ViewManager> createViewManagers(ReactApplicationContext reactApplicationContext) {
-    return Arrays.<ViewManager>asList(new RSSignatureCaptureViewManager(mCurrentActivity));
+    return Arrays.<ViewManager>asList(new RSSignatureCaptureViewManager());
   }
 
   @Override

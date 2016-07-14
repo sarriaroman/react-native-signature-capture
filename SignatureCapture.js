@@ -65,7 +65,7 @@ class SignatureCapture extends React.Component {
 
     saveImage() {
         UIManager.dispatchViewManagerCommand(
-            React.findNodeHandle(this),
+            ReactNative.findNodeHandle(this),
             UIManager.RSSignatureView.Commands.saveImage,
             [],
         );
@@ -73,7 +73,7 @@ class SignatureCapture extends React.Component {
 
     resetImage() {
         UIManager.dispatchViewManagerCommand(
-            React.findNodeHandle(this),
+            ReactNative.findNodeHandle(this),
             UIManager.RSSignatureView.Commands.resetImage,
             [],
         );
@@ -85,7 +85,6 @@ SignatureCapture.propTypes = {
     rotateClockwise: PropTypes.bool,
     square: PropTypes.bool,
     saveImageFileInExtStorage: PropTypes.bool,
-    viewMode: PropTypes.string,
     showNativeButtons: PropTypes.bool,
     maxSize:PropTypes.number
 };
